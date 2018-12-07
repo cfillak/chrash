@@ -5,11 +5,6 @@
 /**
  * Initializes the log.
  *
- * You may assuem that:
- * - This function will only be called once per instance of log_t.
- * - This function will be the first function called per instance of log_t.
- * - All pointers will be valid, non-NULL pointer.
- *
  * @returns
  *   The initialized log structure.
  */
@@ -22,11 +17,6 @@ void log_init(log_t *l) {
 
 /**
  * Frees all internal memory associated with the log.
- *
- * You may assume that:
- * - This function will be called once per instance of log_t.
- * - This funciton will be the last function called per instance of log_t.
- * - All pointers will be valid, non-NULL pointer.
  *
  * @param l
  *    Pointer to the log data structure to be destoryed.
