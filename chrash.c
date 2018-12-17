@@ -60,12 +60,12 @@ int main() {
 
             pid_t child_pid, cpid;
             switch (child_pid = fork()) {
-                case -1:                        // fork() failure
+                case -1:                            // fork() failure
                     printf("Fork Failed\n");
                     exit(1);
-                case 0:                         // Child of successful fork()
+                case 0:                             // Child of successful fork()
                     cpid = getpid();
-                    execvp(command[0], command);
+                    execvp(command[0], command);    // Execute all non built in commands
                     printf("%s: not found\n", line);
                     exit(1);
 
