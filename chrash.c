@@ -54,6 +54,11 @@ int main() {
                 free(line);
                 log_destroy(&Log);
                 break;
+            } else if (!strncmp(command[0], "!#", 2)) {
+                int i;
+                for (i = (&Log)->end-1; i >= 0; i--) {
+                    printf("%s\n", (&Log)->the_log[i]);
+                }
             }
 
             /* END BUILT IN FUNCTIONS */
